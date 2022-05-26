@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgift 10 Johan Lindberg</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <p id="toppknp"><a href="#topp">Topp</a></p>
+        <nav id="topp" class="topp">
+            <img class="lol-logga-höjd" src="bilder/lol-logga.png" alt="">
+            <!-- Knapparna vid toppen av sidan med en onclikc så att den bytert sida, varje knapp leder till respektive del av sidan med hjälp av javascript -->
+            <!-- dessa är även animerade med css -->
+            <a id="knapp-nav-kontakt" href="#kontakt" class="kanpp5" onclick="visa('kontakt', 'riot', 'worlds', 'omlol', 'hem')">KONTAKT</a> 
+            <a id="knapp-nav-riot" href="#riot" class="knapp4" onclick="visa('riot', 'worlds', 'omlol', 'hem', 'kontakt')">RIOT GAMES</a>
+            <a id="knapp-nav-worlds" href="#worlds" class="knapp3" onclick="visa('worlds', 'hem', 'riot', 'omlol', 'kontakt')">WORLD 2021</a>
+            <a id="knapp-nav-omlol" href="#omlol" class="knapp2" onclick="visa('omlol', 'hem', 'riot', 'worlds', 'kontakt')">OM LOL</a>
+            <a id="knapp-nav-hem" href="#hem" class="knapp1" onclick="visa('hem', 'omlol', 'worlds', 'riot', 'kontakt')">HEM</a>
+            
+        </nav>
+    </header>
+    <!-- Hem sektionen -->
+    <div class="hem" id="hem">
+        <div id="hem-bakgrundom">
+        <h1 id="h1-hem-walla">Leauge of legends</h1> <!-- Har en färgskiftande animation med hjälp av css -->
+            <div>
+                <p>
+                    Denna sida är en informations sida om spelet League of legends av Riot games. <br>
+                    Det finnsinformation om spelet, karaktärerna i spelet, och lite historia om deras universum. <br>       
+                    Men även om vad mer Riot games gör för andra saker med sin plattform. Som andra spel och stora tuneringar. 
+                </p>
+
+            </div>
+        </div>
+        <div>
+
+        </div>
+
+        
+    </div>
+
+
+
+    <!-- Om lol delen -->
+    <div class="omlol none" id="omlol">
+        <div class="omlol-knappar">
+            <h1>Vad är Leauge Of Legends?</h1>
+            <!-- Knapparna som navigerar till delarna i omlol -->
+            <div class="omlolknappar">
+                <a href="#kartan">Kartan</a>
+                <a href="#gubbarna">Karaktärerna</a>
+                <a href="#världen">Världen</a>
+            </div>
+        </div>
+        <!-- Bild på kartan -->
+        <div class="kartan" id="kartan">
+            <h2 class="titelkarta">Kartan</h2>
+            <img src="bilder/summoners_rift.jpg" alt="">
+
+            <!-- En lista över vad lol går ut på -->
+            <ul class="kartaInfo">
+                <li>Kartan på Leauge Of Legends heter Summoner´s Rift. Den består av två baser till de två lagen Röd och BLÅ och 3 lanes, Top lane, Mid lane och Bot lane</li>
+                <li>De två baserna består av en <abbr title="För att vinna en match så behöver man ta sönder motståndarens Nexus">Nexus</abbr> tre <abbr title="En inhibitor måste tas sönder för att kunna skada nexusen">Inhibitors</abbr> och 11 <abbr title="Torn behöver dödas för att komma åt Inhibitors och Nexus">Torn</abbr></li>
+                <li>Mellan Lanesen och baserna så finns det en så kallad Djungel. I djungeln så finns det neutrala monster som man kan döda för att få guld och <abbr title="Experience points">XP</abbr>.</li>
+                <li>I varje bas finns en Shopkeeper som man kan handla <abbr title="Items är som vapen som gör din gubbe starkare">Items</abbr></li>
+            </ul>
+          </div>
+        <div class="gubbarna" id="gubbarna">
+            <h1 id="gubh1">Gubbarna</h1>
+            <!-- Innerhåller de olika gubbarna med display flex för att göra det simplare -->
+            <div class="gubbklasser">
+                <!-- En div som innerhåller p för text och h3 för rubrik  -->
+                <div class="assasin allaGubb">
+                    <p class="klassText">En Assasins jobb är att döda dig på så kort tid som möjligt, dock så har de lite liv och dör snabbt. Så det gäller att döda innan man blir dödad.</p>
+                    <h3 class="gubbh3">ASSASIN</h3>
+                </div>
+                <div class="fighter allaGubb">
+                    <p class="klassText">En Fighters uppgift är som det låte, att slåss. En fighter gör mellanhög skada och har ofta mycket liv så att han kan skada folk mycket och länge.</p>
+                    <h3 class="gubbh3">FIGHTER</h3>
+                </div>
+                <div class="mage allaGubb">
+                    <p class="klassText">En Mage är en karaktär som använder magi för att skada andra. De gör ofta mycket skada men de har ofta ganska lite liv men kan ofta skada från längre ifrån.</p>
+                    <h3 class="gubbh3">MAGE</h3>
+                </div>
+                <div class="marksman allaGubb">
+                    <p class="klassText">En Marksman har hög <abbr title="Damage Per Second (Skada per sekund)">DPS</abbr> och är därför perfekt för att göra mycket skada till motståndarna, de har få liv men kan vinna en duell mot de flästa senare i matchen.</p>
+                    <h3 class="gubbh3">MARKSMAN</h3>
+                </div>
+                <div class="support allaGubb">
+                    <p class="klassText">En Supports jobb är att hjälpa laget att vinna genom att heala och/eller <abbr title="Crowd Controll, att få andra laget att stå still mot deras vilja">CC´a</abbr>. De kan ha mycket skada och många liv eller mycket heal men ofta bara en av dessa.</p>
+                    <h3 class="gubbh3">SUPPORT</h3>
+                </div>
+                <div class="tank allaGubb">
+                    <p class="klassText">En Tanks uppgift är att absorbera så mycket skada som möjligt medans de hjälper sitt lag med <abbr title="Crowd Controll, att få andra laget att stå still mot deras vilja">CC´a.</abbr> De har ofta mycket Recistances som gör att de tar mindra skada totalt.</p>
+                    <h3 class="gubbh3">TANK</h3>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Denna diven innerhåller de olika knapparna för att visa de olika regionerna -->
+        <div class="världen" id="världen">
+            <h1>VÄRLDEN AV RUNETERRA</h1>
+            <div class="regioner">
+                <!-- Varje div leder till en annan del, och har namnet på den delen den ledr till i en h2 -->
+                <div class="bandelcity allareg" id="bandelcity" onclick="regioner_visa('bandelcityinfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('bandelcityinfo')">
+                    <h2>BANDEL CITY</h2>
+                </div>
+                <div class="bilgewater allareg" id="bilgewater" onclick="regioner_visa('bilgewaterinfo', 'bandelcityinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('bilgewaterinfo')">
+                    <h2>BILGEWATER</h2>
+                </div>
+                <div class="demacia allareg" id="demacia" onclick="regioner_visa('demaciainfo', 'bilgewaterinfo', 'bandelcityinfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('demaciainfo')">
+                    <h2>DEMACIA</h2>
+                </div>
+                <div class="ionia allareg" id="ionia" onclick="regioner_visa('ioniainfo', 'bilgewaterinfo', 'demaciainfo', 'bandelcityinfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('demaciainfo')">
+                    <h2>IONIA</h2>
+                </div>
+                <div class="ixtal allareg" id="ixtal" onclick="regioner_visa('ixtalinfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'bandelcityinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('ixtalinfo')">
+                    <h2>IXTAL</h2>
+                </div>
+                <div class="noxus allareg" id="noxus" onclick="regioner_visa('noxusinfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'bandelcityinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('noxusinfo')">
+                    <h2>NOXUS</h2>
+                </div>
+                <div class="piltover allareg" id="piltover" onclick="regioner_visa('piltoverinfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'bandelcityinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('piltoverinfo')">
+                    <h2>PILTOVER</h2>
+                </div>
+                <div class="shadowisles allareg" id="shadowisles" onclick="regioner_visa('shadowislesinfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'bandelcityinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('shadowislesinfo')">
+                    <h2>SHADOW ISLES</h2>
+                </div>
+                <div class="shurima allareg" id="shurima" onclick="regioner_visa('shurimainfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'bandelcityinfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('shurimainfo')">
+                    <h2>SHURIMA</h2>
+                </div>
+                <div class="targon allareg" id="targon" onclick="regioner_visa('targoninfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'bandelcityinfo', 'freljordinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('targoninfo')">
+                    <h2>TARGON</h2>
+                </div>
+                <div class="freljord allareg" id="freljord" onclick="regioner_visa('freljordinfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'bandelcityinfo', 'thevoidinfo', 'zauninfo'); scrolla_till('freljordinfo')">
+                    <h2>FRELJORD</h2>
+                </div>
+                <div class="thevoid allareg" id="thevoid" onclick="regioner_visa('thevoidinfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'bandelcityinfo', 'zauninfo'); scrolla_till('thevoidinfo')">
+                    <h2>THE VOID</h2>
+                </div>
+                <div class="zaun allareg" id="zaun" onclick="regioner_visa('zauninfo', 'bilgewaterinfo', 'demaciainfo', 'ioniainfo', 'ixtalinfo', 'noxusinfo', 'piltoverinfo', 'shadowislesinfo', 'shurimainfo', 'targoninfo', 'freljordinfo', 'thevoidinfo', 'bandelcityinfo'); scrolla_till('zauninfo')">
+                    <h2>ZAUN</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- En reginfo div, denna återupprepas många gånger nedan eftersom det är samma layout och därmed kommenterar bara en -->
+        <div class="reginfo">
+            <div class="bandelcityinfo" id="bandelcityinfo">
+                <!-- pilarna som man kan navigera med en onclick som byter sida -->
+                <div class="knappv" onclick="pilar('zauninfo', 'bandelcityinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('bilgewaterinfo', 'bandelcityinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <!-- Själva diven som informationen ligger i -->
+                <div class="allareg-info">
+                    <h1 class="infoh1">BANDEL CITY</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/bandlecity-icon.png" alt="">
+                    </div>
+                    <!-- lite bilder på gubbarna -->
+                    <div class="regioner-gubbar">                        
+                        <div class="lulu allagubbarinfo gubbar-regioner"><h3 class="h3info">LULU</h3></div>                        
+                        <div class="teemo allagubbarinfo gubbar-regioner"><h3 class="h3info">TEEMO</h3></div>
+                        <div class="tristana allagubbarinfo gubbar-regioner"><h3 class="h3info">TRISTAN</h3></div>
+                        <div class="veigar allagubbarinfo gubbar-regioner"><h3 class="h3info">VEIGAR</h3></div>                       
+                    </div>
+                    <!-- Information -->
+                    <h1 class="h1-region">NÅGRA KARAKTÄRER FRÅN BANDEL CITY</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/bandelcity-stad.jpg" alt="">
+                    <p class="region-p">
+                        Bandel city är en plats med små byggnader för de små yordles. En yordel är en ras av korta och bepälsade varelser. Bandel city är en magisk plats med en oidentifierad plats på runeterra, ibland kan portaler helt plötsligt komma fram på olika platser som leder till Bandel city och därför är det inte många som vet hur man kommer dit. <br>
+                        Det fungerar genom att Bandel city ligger i så kallde "Sprit realm", och har därmed inge dirrekt kopplin till material realm (Normala världen). Det possitiva med denna regionen är att eftersom den inte ligger i material realmen och de flästa inte kan hitta portalerna så är den säker mot de som vill ta över världen.
+                    </p>
+                </div>
+                
+            </div>
+
+
+            <div class="bilgewaterinfo" id="bilgewaterinfo">
+                <div class="knappv" onclick="pilar('bandelcityinfo', 'bilgewaterinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('demaciainfo', 'bilgewaterinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">BILGEWATER</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/bilgewater-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="fizz allagubbarinfo gubbar-regioner"><h3 class="h3info">FIZZ</h3></div>
+                        <div class="gangplank allagubbarinfo gubbar-regioner"><h3 class="h3info">GANGPLANK</h3></div>
+                        <div class="nautilus allagubbarinfo gubbar-regioner"><h3 class="h3info">NAUTILUS</h3></div>
+                        <div class="pyke allagubbarinfo gubbar-regioner"><h3 class="h3info">PYKE</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA KARAKTÄRER FRÅN BILGEWATER</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/bilgewater.jpg" alt="">
+                    <p class="region-p">
+                        
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="demaciainfo" id="demaciainfo">
+                <div class="knappv" onclick="pilar('bilgewaterinfo', 'demaciainfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('ioniainfo', 'demaciainfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">DEMACIA</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/demacia-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="fiora allagubbarinfo gubbar-regioner "><h3 class="h3info">FIORA</h3></div>
+                        <div class="garen allagubbarinfo gubbar-regioner"><h3 class="h3info">GAREN</h3></div>
+                        <div class="lux allagubbarinfo gubbar-regioner"><h3 class="h3info">LUX</h3></div>
+                        <div class="sylas allagubbarinfo gubbar-regioner"><h3 class="h3info">SYALAS</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA KARAKTÄRER FRÅN DEMACIA</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/demacia.jpeg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="ioniainfo" id="ioniainfo">
+                <div class="knappv" onclick="pilar('demaciainfo', 'ioniainfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('ixtalinfo', 'ioniainfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">IONIA</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/iona-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="irelia allagubbarinfo gubbar-regioner"><h3 class="h3info">IRELIA</h3></div>
+                        <div class="ivern allagubbarinfo gubbar-regioner"><h3 class="h3info">IVERN</h3></div>
+                        <div class="lilia allagubbarinfo gubbar-regioner"><h3 class="h3info">LILIA</h3></div>
+                        <div class="ahri allagubbarinfo gubbar-regioner"><h3 class="h3info">AHRI</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN IONIA</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/ionia.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="ixtalinfo" id="ixtalinfo">
+                <div class="knappv" onclick="pilar('ioniainfo', 'ixtalinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('noxusinfo', 'ixtalinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">IXTAL</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/ixtal-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="malphite allagubbarinfo gubbar-regioner"><h3 class="h3info">MALPHITE</h3></div>
+                        <div class="nidalee allagubbarinfo gubbar-regioner"><h3 class="h3info">NIDALEE</h3></div>
+                        <div class="qiyana allagubbarinfo gubbar-regioner"><h3 class="h3info">QIYANA</h3></div>
+                        <div class="rengar allagubbarinfo gubbar-regioner"><h3 class="h3info">RENGAR</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN IXTAL</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/ixtal.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="noxusinfo" id="noxusinfo">
+                <div class="knappv" onclick="pilar('ixtalinfo', 'noxusinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('piltoverinfo', 'noxusinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">NOXUS</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/noxus-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="darius allagubbarinfo gubbar-regioner"><h3 class="h3info">DARIUS</h3></div>
+                        <div class="katarina allagubbarinfo gubbar-regioner"><h3 class="h3info">KATARINA</h3></div>
+                        <div class="kled allagubbarinfo gubbar-regioner"><h3 class="h3info">KLED</h3></div>
+                        <div class="sion allagubbarinfo gubbar-regioner"><h3 class="h3info">SION</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN NOXUS</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/noxus.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="piltoverinfo" id="piltoverinfo">
+                <div class="knappv" onclick="pilar('noxusinfo', 'piltoverinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('shadowislesinfo', 'piltoverinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">PILTOVER</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/piltover-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="camille allagubbarinfo gubbar-regioner"><h3 class="h3info">CAMILLE</h3></div>
+                        <div class="orianna allagubbarinfo gubbar-regioner"><h3 class="h3info">ORIANNA</h3></div>
+                        <div class="ezreal allagubbarinfo gubbar-regioner"><h3 class="h3info">EZREAL</h3></div>
+                        <div class="vi allagubbarinfo gubbar-regioner"><h3 class="h3info">VI</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN PILTOVER</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/piltover.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="shadowislesinfo" id="shadowislesinfo">
+                <div class="knappv" onclick="pilar('piltoverinfo', 'shadowislesinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('shurimainfo', 'shadowislesinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">SHADOW ISLES</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/shadowisles-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="viego allagubbarinfo gubbar-regioner"><h3 class="h3info">VIEGO</h3></div>
+                        <div class="thresh allagubbarinfo gubbar-regioner"><h3 class="h3info">THRESH</h3></div>
+                        <div class="elise allagubbarinfo gubbar-regioner"><h3 class="h3info">ELISE</h3></div>
+                        <div class="maokai allagubbarinfo gubbar-regioner"><h3 class="h3info">MAOKAI</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN SHADOW ISLES</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/shadow-isles.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="shurimainfo" id="shurimainfo">
+                <div class="knappv" onclick="pilar('shadowislesinfo', 'shurimainfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('targoninfo', 'shurimainfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">SHURIMA</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/shurima-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="azir allagubbarinfo gubbar-regioner"><h3 class="h3info">AZIR</h3></div>
+                        <div class="skarner allagubbarinfo gubbar-regioner"><h3 class="h3info">SKARNER</h3></div>
+                        <div class="xerath allagubbarinfo gubbar-regioner"><h3 class="h3info">XERATH</h3></div>
+                        <div class="akshan allagubbarinfo gubbar-regioner"><h3 class="h3info">AKSHAN</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN SHURIMA</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/shurima.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="targoninfo" id="targoninfo">
+                <div class="knappv" onclick="pilar('shurimainfo', 'targoninfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('freljordinfo', 'targoninfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">TARGON</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/targon-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="taric allagubbarinfo gubbar-regioner"><h3 class="h3info">TARIC</h3></div>
+                        <div class="leona allagubbarinfo gubbar-regioner"><h3 class="h3info">LEONA</h3></div>
+                        <div class="diana allagubbarinfo gubbar-regioner"><h3 class="h3info">DIANA</h3></div>
+                        <div class="zoe allagubbarinfo gubbar-regioner"><h3 class="h3info">ZOE</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN TARGON</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/targon.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="freljordinfo" id="freljordinfo">
+                <div class="knappv" onclick="pilar('targoninfo', 'freljordinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('thevoidinfo', 'freljordinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">FRELJORD</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/freljord-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="ashe allagubbarinfo gubbar-regioner"><h3 class="h3info">ASHE</h3></div>
+                        <div class="ornn allagubbarinfo gubbar-regioner"><h3 class="h3info">ORNN</h3></div>
+                        <div class="volibear allagubbarinfo gubbar-regioner"><h3 class="h3info">VOLIBEAR</h3></div>
+                        <div class="anivia allagubbarinfo gubbar-regioner"><h3 class="h3info">ANIVIA</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN FRELJORD</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/freljord.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="thevoidinfo" id="thevoidinfo">
+                <div class="knappv" onclick="pilar('freljordinfo', 'thevoidinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="knapph" onclick="pilar('zauninfo', 'thevoidinfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">THE VOID</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/void-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="velkoz allagubbarinfo gubbar-regioner"><h3 class="h3info">VEL'KOZ</h3></div>
+                        <div class="kogmaw allagubbarinfo gubbar-regioner"><h3 class="h3info">KOG'MAW</h3></div>
+                        <div class="kaisa allagubbarinfo gubbar-regioner"><h3 class="h3info">KAI'SA</h3></div>
+                        <div class="khazix allagubbarinfo gubbar-regioner"><h3 class="h3info">KHA'ZIX</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN THE VOID</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/the-void.jpg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="zauninfo" id="zauninfo">
+                <div class="knappv" onclick="pilar('thevoidinfo', 'zauninfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                    <p>THE VOID</p>
+                </div>
+                <div class="knapph" onclick="pilar('bandelcityinfo', 'zauninfo')">
+                    <img src="bilder/arrow-transparent.png" alt="">
+                    <p>BANDE CITY</p>
+                </div>
+                <div class="allareg-info">
+                    <h1 class="infoh1">ZAUN</h1>
+                    <div class="infodiv1">
+                        <h2 class="infoh2">LOGGA</h2>
+                        <img class="infoimg" src="bilder/iconer/zaun-icon.png" alt="">
+                    </div>
+                    <div class="regioner-gubbar">
+                        <div class="singed allagubbarinfo gubbar-regioner"><h3 class="h3info">SINGED</h3></div>
+                        <div class="zac allagubbarinfo gubbar-regioner"><h3 class="h3info">ZAC</h3></div>
+                        <div class="twitch allagubbarinfo gubbar-regioner"><h3 class="h3info">TWITCH</h3></div>
+                        <div class="viktor allagubbarinfo gubbar-regioner"><h3 class="h3info">VIKTOR</h3></div>
+                    </div>
+                    <h1 class="h1-region">NÅGRA GUBBAR FRÅN ZAUN</h1>
+                    <img class="bild-i-info-höger" src="bilder/regioner/zaun.jpeg" alt="">
+                    <p class="region-p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, dignissimos cum? Optio quae, eaque beatae consectetur possimus nihil fuga esse minus aliquid aliquam quasi cupiditate molestiae numquam rerum alias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum ad iure, amet omnis laboriosam ea impedit corrupti minima assumenda, ipsa aspernatur maiores est quam facere aperiam nesciunt nobis laudantium?
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+
+    <!-- Worlds sektionen start -->
+    <div class="worlds none" id="worlds">
+        <div class="WorldsContent">
+            <h1>WORLDS 2021</h1>
+            
+            
+            
+            <!-- Info om worlds och vad som händer omkring det -->
+            <div class="grupper">
+                <p id="worlds-text">
+                    Varje år så anordnar Riot Games en internationell tunering med de bästa lagen från alla regioner. För att kvalifixera sig till tuneringen så måste man komma innom topp 2 av de lagen i sin region man tävlar i under sesången. Sen så får man spela kvalmatcher för att tillslut komma in i world.
+                     Dessa ärlagen som har kvalificerat sig och blivigt placerade i grupper.
+                </p>
+
+                <!-- Valde att inte ha med olika färger i tabellen nedan som det står i uppgift -->
+                <table class="grupp-a">
+                    <tr>
+                        <!-- Colspan för att de skatäcxk  2 rader -->
+                        <th class="vit" colspan="2">GRUPP A</th>
+                        <th colspan="2">GRUPP B</th>
+                        <th class="vit" colspan="2">GRUPP C</th>
+                        <th colspan="2">GRUPP D</th>
+                    </tr>
+                    <tr>
+                        <!-- Varje cell innerhåller ett lags namn och deras bild -->
+                        <td class="vit"><img src="bilder/loggor/DWG.png" alt="DWG"></td><!-- BIlden -->
+                        <th class="vit">DWG KIA</th><!-- Namnet på laget -->
+                        <td><img src="bilder/loggor/EDG.png" alt="EDG"></td>
+                        <th>EDWAR GAMING</th>
+                        <td class="vit"><img src="bilder/loggor/PSG.png" alt="PSG"></td>
+                        <th class="vit">PSG TALON</th>
+                        <td><img src="bilder/loggor/MAD.png" alt="MAD"></td>
+                        <th>MAD LIONS</th>
+                    </tr>
+                    <tr>
+                        <td class="vit"><img src="bilder/loggor/FPX.png" alt="FUNP"></td>
+                        <th class="vit">FPX</th>
+                        <td><img src="bilder/loggor/100T.png" alt="100T"></td>
+                        <th>100 THIEVES</th>
+                        <td class="vit"><img src="bilder/loggor/FNC.png" alt="FNC"></td>
+                        <th class="vit">FNATIC</th>
+                        <td><img src="bilder/loggor/GEN.G.png" alt="GEN.G"></td>
+                        <th>GEN.G</th>
+                    </tr>
+                    <tr>
+                        <td class="vit"><img src="bilder/loggor/RGE.png" alt="ROUGE"></td>
+                        <th class="vit">ROGUE</th>
+                        <td><img src="bilder/loggor/T1.png" alt="T1"></td>
+                        <th>T1</th>
+                        <td class="vit"><img src="bilder/loggor/RNG.png" alt="RNG"></td>
+                        <th class="vit">RNG</th>
+                        <td><img src="bilder/loggor/TL.png" alt="TL"></td>
+                        <th>TEAM LIQUID</th>
+                    </tr>
+                    <tr>
+                        <td class="vit"><img src="bilder/loggor/C9.png" alt="C9"></td>
+                        <th class="vit">CLOUD 9</th>
+                        <td><img src="bilder/loggor/DNF.png" alt="DETF"></td>
+                        <th>DETONATION FOCUSME</th>
+                        <td class="vit"><img src="bilder/loggor/HLE.png" alt="HLE"></td>
+                        <th class="vit">HLE</th>
+                        <td><img src="bilder/loggor/LNG.png" alt="LNG"></td>
+                        <th>LNG ESPORTS</th>
+                    </tr>
+                </table>
+
+                
+            </div>
+            <!-- en div som innrhåller en video och en text om worlds -->
+            <div class="worlds-låt">
+                <p>I samband med worlds varje år så släpps det en låt i samband med den, det förekommer även en musik video där lol-stjärnorna ofta visar sig som karaktörer från spelet.</p>
+                <video src="Videor/burnitalldown.mp4" controls width="710"></video> <!-- Video med controls och 710px bred -->
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- Riot games delen -->
+    <div class="riot none" id="riot">
+        <h1 class="RiotSpelH1">RIOT GAMES</h1>
+        <p id="Riot-p-wiki"><a target="blank_" href="https://en.wikipedia.org/wiki/Riot_Games">Riot games wiki</a></p>
+        <div class="riotspel" id="riotspel">
+            <h1 class="RiotSpelH1">RIOT GAMES PRODUCERADE SPEL</h1>
+            <!-- Divarna som visas när man klickar på vadera spel de repiteras om igen -->
+            <div class="Spelen">
+                <div class="SPELInfo" id="valInfo">
+                    <div onclick="göm('valInfo')" class="close"> <!-- Knapp för att stänga -->
+                        <img src="bilder/stängknapp.png" alt=""><!-- Själva bilden som knappen visar -->
+                    </div>
+                    <!-- Informationen som ligger i själva helheten -->
+                    <h1 class="H1Spel">VALORANT</h1>
+                    <img class="IMGSpel" src="bilder/spel/bakgrunder/valorant-productimage.png" alt=""><!-- Bakgrundsbilden som har spelet i sig -->
+                    <img id="VALLogga" src="bilder/spel/valorant-logotype.png" alt=""> <!-- Texten som ligger över bilden -->
+                    <!-- Info om spelet -->
+                    <p class="PSpel">Valorant är ett <abbr title="First Person Shooter">FPS</abbr> spel där målet är olika för de två lage. Det ena laget´s mål är att plantera spiken, en sorts bomb. Medans det andra lagets mål är att stoppa spiken från att explodera genom att antingen döda alla motståndare eller desarmera spiken.</p>
+                    
+                </div>
+                <div class="SPELInfo" id="tftInfo">
+                    <div onclick="göm('tftInfo')" class="close">
+                        <img src="bilder/stängknapp.png" alt="">
+                    </div>
+                    <h1 class="H1Spel">TEAMFIGHT TACTICS</h1>
+                    <img class="IMGSpel" src="bilder/spel/bakgrunder/tft-card-bg-1800.jpg" alt="">
+                    <img id="TFTLogga" src="bilder/spel/tft-logotype-2021.png" alt="">
+                    <p class="PSpel">Teamfight Tactics är ett runda baserat sorts kortspel där man får pengar varje rond för att köpa flera och starkare gubbar, gubbarna är samma gubbar som finns i Leauge Of Legends. I spelet så lär man sig en mix av strategier, styrkor, svagheter och spelets ekonomi. Varje person börjar med 100 liv som man förlorar över tid med förlorade matcher beroende på hur många matcher man förlorade eller vunnit innan. Den som kan klara sig längst utan att dö vinner matchen.</p>
+                </div>
+                <div class="SPELInfo" id="wildInfo">
+                    <div onclick="göm('wildInfo')" class="close">
+                        <img src="bilder/stängknapp.png" alt="">
+                    </div>
+                    <h1 class="H1Spel">WILD RIFT</h1>
+                    <img src="bilder/spel/bakgrunder/lol-wildrift-productimage.png" alt="" class="IMGSpel">
+                    <img src="bilder/spel/lol-wildrift-logotype.png" alt="" id="WILDLogga">
+                    <p class="PSpel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni odit modi perspiciatis provident ab reiciendis unde minus esse voluptates. Consectetur consequatur modi quas illo sed vitae facilis laboriosam provident necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore autem voluptatum ducimus ipsum modi minima doloremque distinctio quaerat. Modi, rem maiores! Ipsam quo ullam perferendis aliquam alias illo consectetur?</p>
+                </div>
+                <div class="SPELInfo" id="lolInfo">
+                    <div onclick="göm('lolInfo')" class="close">
+                        <img src="bilder/stängknapp.png" alt="">
+                    </div>
+                    <h1 class="H1Spel">LEAUGE OF LEGENDS</h1>
+                    <img src="bilder/spel/bakgrunder/lol-card-bg-1800.jpg" alt="" class="IMGSpel">
+                    <img src="bilder/spel/lol-logotype.png" alt="" id="LOLLogga">
+                    <p class="PSpel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni odit modi perspiciatis provident ab reiciendis unde minus esse voluptates. Consectetur consequatur modi quas illo sed vitae facilis laboriosam provident necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore autem voluptatum ducimus ipsum modi minima doloremque distinctio quaerat. Modi, rem maiores! Ipsam quo ullam perferendis aliquam alias illo consectetur?</p>
+                </div>
+                <div class="SPELInfo" id="lorInfo">
+                    <div onclick="göm('lorInfo')" class="close">
+                        <img src="bilder/stängknapp.png" alt="">
+                    </div>
+                    <h1 class="H1Spel">LEGENDS OF RUNETERRA</h1>
+                    <img src="bilder/spel/bakgrunder/legends-of-runeterra-productimage.png" alt="" class="IMGSpel">
+                    <img src="bilder/spel/legends-of-runeterra-logotype.png" alt="" id="LORLogga">
+                    <p class="PSpel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni odit modi perspiciatis provident ab reiciendis unde minus esse voluptates. Consectetur consequatur modi quas illo sed vitae facilis laboriosam provident necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore autem voluptatum ducimus ipsum modi minima doloremque distinctio quaerat. Modi, rem maiores! Ipsam quo ullam perferendis aliquam alias illo consectetur?</p>
+                </div>
+
+                <!-- Det man klickar på för att se inforn om spelen -->
+                <div class="valorant allaSpel">
+                    <img class="spelbild valspel" id="ValSpel" src="bilder/spel/valorant-logotype.png" alt="">
+                    <img onclick="visa2('valInfo', 'tftInfo', 'wildInfo', 'lolInfo', 'lorInfo')" class="valspel2"  src="bilder/spel/bakgrunder/valorant-productimage.png" alt="">
+                </div>
+                <div class="tft allaSpel">
+                    <img class="spelbild TftSpel" id="TftSpel" src="bilder/spel/tft-logotype-2021.png" alt="">
+                    <img onclick="visa2('tftInfo', 'valInfo', 'wildInfo', 'lolInfo', 'lorInfo')" class="TftSpel2" src="bilder/spel/bakgrunder/tft-card-bg-1800.jpg" alt="">
+                </div>
+                <div class="wildRift allaSpel">
+                    <img class="spelbild WildSpel" id="WildSpel" src="bilder/spel/lol-wildrift-logotype.png" alt="">
+                    <img onclick="visa2('wildInfo', 'tftInfo', 'valInfo', 'lolInfo', 'lorInfo')" class="WildSpel2" src="bilder/spel/bakgrunder/lol-wildrift-productimage.png" alt="">
+                </div>
+                <div class="riotLeauge allaSpel">
+                    <img class="spelbild LolSpel" id="LolSpel" src="bilder/spel/lol-logotype.png" alt="">
+                    <img onclick="visa2('lolInfo', 'tftInfo', 'valInfo', 'wildInfo', 'lorInfo')" class="LolSpel2" src="bilder/spel/bakgrunder/lol-card-bg-1800.jpg" alt="">
+                </div>
+                <div class="LORuneterra allaSpel">
+                    <img class="spelbild LORSpel" id="LORSpel" src="bilder/spel/legends-of-runeterra-logotype.png" alt="">
+                    <img onclick="visa2('lorInfo', 'tftInfo', 'valInfo', 'wildInfo', 'lolInfo')" class="LORSpel2" src="bilder/spel/bakgrunder/legends-of-runeterra-productimage.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Arcane info i Riot games delen -->
+        <div class="arcane">
+            <h1>ARCANE</h1>
+            <span class="arcaneText">Nyligen så släppte Riot games en serie på netflix som heter arcane. Arcane utspelas i städerna Piltover och Zaun. I piltover bor de rika uppfinnaran, medans de kriminella gängen bor nere i "Underjorden som de kallar Zaun. Men folket i Zaun har tröttnat bå att bli behandlade som skräp av folket i Piltover och bestämmer sig tillslut för att göra motstånd."</span>
+            <!-- En div som innerhåller en bild och text i form av en bild som skapar en fin bild -->
+            <div id="arcaneBildDiv">
+                <img id="arcaneBild" src="bilder/arcane-background.jpg" alt="">
+                <img id="arcaneLogga" src="bilder/arcane-logo.png" alt="">
+            </div>
+            <div id="Trailer">
+                <h2 id="h2arcane">OFFICIELL ARCANE TRAILER</h2>
+                <!-- Video på arcane trailer -->
+                <video src="Videor/arcane.mp4" controls width="710"></video>
+            </div>
+            <p id="TextArcane">Arcane har blivigt en sensation i många länder över världen. Arcane to över andra platsen i antal tittartimmar första veckan som den släpptes med endast tre episoder i ett totalt tittartal på 34 Miljoner personer. Det kommer att senare släppas 6 episoder till i två så kallade "acts", act 2 och act 3. En andra sesång är inte ännu bekräftad men pågrund av första sesångens popularitet så kommer det troligtvis fler sesånger till Arcane.</p>
+        </div>
+    </div>
+    <!-- Kontakt delen -->
+    <div class="kontakt" id="kontakt">
+        <div class="kontaktDel">
+            <h1 id="kontaktH1">Kontakt</h1>
+
+            <!-- En form där man skickar in sin feedback -->
+            <form id="KonataktForm" class="none" method="get" action="visa.html">
+                <input class="inputkon" type="text" placeholder="Namn">
+                <input class="inputkon" type="text" placeholder="E-post">
+                <input class="inputkon" type="text" placeholder="Telfon">
+                <textarea rows="5" cols="60" name="text" id="Fråga" placeholder="Enter text"></textarea>
+                <input id="Submit" type="submit" value="submit"/>
+            </form>
+            
+           
+        </div>
+    </div>
+
+    <!-- Footern med länk till kontakt och en snurrande logga -->
+    <footer class="footer">
+        
+        <p id="footerp">
+                <a target="blank_" href="https://tibble.nu/"><img class="tibble" src="bilder/tibble.png" alt=""></a> <!-- snurr animation med css och länk till tibble -->
+                <br>
+                <a onclick="visa('kontakt', 'riot', 'worlds', 'omlol', 'hem')" class="Afoot" href="#kontakt">KONTAKT</a>
+                <br>
+                Detta material är inte ditt utan Johans &copy;
+            </p>
+    </footer>
+
+
+
+</body>
+</html>

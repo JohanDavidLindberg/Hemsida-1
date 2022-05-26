@@ -1,0 +1,1440 @@
+@import url(//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold);
+/* importerar den huvudsakliga fonten av sidan */
+/* DETTA KAN GÖRA SÅ DEN INTE GÅR IGENOM VALIDATORN MEN DET ÄR FÖR ATT DEN INTE ACCEPTERER TREDJE PARTIS FONTS */
+
+
+/* Lite info om hu sidan ska vara */
+body {
+    margin: 0;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.none {
+    display: none;
+}
+
+/* Toppdelen och knapparna */
+nav {
+    height: 179px;
+    background: white;
+}
+
+nav img {
+    margin-top: 0;
+    margin-left: 20px;
+    animation: Andas 4s infinite;
+}
+/* Dessa @media gör så att knapparna i navbaren försvinner vid en viss bredd av sidan */
+@media (max-width: 936px){        
+    #knapp-nav-hem{
+       display: none;
+    }
+}
+@media (max-width: 823px){        
+    #knapp-nav-omlol{
+       display: none;
+    }
+}
+@media (max-width: 667px){        
+    #knapp-nav-worlds{
+       display: none;
+    }
+}
+@media (max-width: 450px){        
+    #knapp-nav-riot{
+       display: none;
+    }
+}
+@media (max-width: 450px){        
+    #knapp-nav-kontakt{
+       display: none;
+    }
+}
+/* Animationen som gör att nav bilden "andas" */
+@keyframes Andas {
+    0% {width: 406px;}
+    50% {width: 450px;}
+    100% {width: 406px;}
+}
+.topp {  
+    background-color: #111;
+    padding-bottom: 6px;
+}
+/* Stil för toppknapparna */
+.topp a {
+    background: lightgray;
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 117px;
+    margin-right: 15px;
+
+}
+/* toppknapparnas hover stil + animation */
+.topp a:hover {
+    transform: rotate(3deg);
+    background-color: #1e2328;
+    overflow: hidden;
+    transition: all 1s ease-in, all 1s ease-out;
+
+    color: white;
+    
+}
+.lol-logga-höjd {
+    height: 179px;
+}
+
+/* Det här gör så att bilden försvinnre när sidan är 1400px bred */
+@media (max-width: 1400px){        
+    .lol-logga-höjd{
+       display: none;
+    }
+}
+/* TOP kanppen */
+
+#toppknp {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 151, 19, 0);
+    font-size: 30px;
+    margin: 0px;
+}
+#toppknp a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hem sektionen */
+
+.hem {
+    background: red;
+    padding: 20px;
+    color: lightgray;
+    padding: 0;
+
+}
+#hem-bakgrundom h1 {
+    color: red;
+    animation: cb 10s infinite;
+    animation-name: cb;
+    animation-duration: 4s;
+}
+
+/* Animationen för färgbytet */
+@keyframes cb {
+    0%   {color: red;}
+    10%  {color: orangered;}
+    20%  {color: orange;}
+    30%  {color: blue;}
+    40%  {color: blueviolet;}
+    50%  {color: violet;}
+    60%  {color: pink;}
+    70%  {color: purple;}
+    80%  {color: lime;}
+    90%  {color: limegreen;}
+    100% {color: yellow;}
+  }
+#hem-bakgrundom {
+    background-image: url("bilder/hembakgrund.jpg");
+    height: 800px;
+    background-position: 0 14%;
+    background-size: cover;
+    font-family: 'BeaufortforLOL-Bold';
+}
+#hem-bakgrundom h1 {
+    margin-top: 0px;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 45px;
+}
+#hem-bakgrundom p {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* omlol sketionen */
+
+.omlol {
+    background: blue;
+    
+    
+}
+.omlol h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+/* Knappdelen i omloldelen */ 
+
+.omlol a {
+    font-size: 70px;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(gray, lightgray, gray);
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.omlol a:hover {
+    transition: all 1s ease-in, all 1s ease-out;
+    letter-spacing: 10px;
+    background: #1e2328;
+    color: white;
+}
+/* Knapparna */
+.omlolknappar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+/* delen med knappar i */
+.omlol-knappar {
+    padding: 10px;
+    background-image: url(bilder/bakgrund-knappar-omlol1.jpeg);
+    background-size: cover;
+    background-position: 50% 100%;
+    border-bottom: #c89b3c 2px solid;
+}
+
+
+/* kartan */
+.kartan {
+    background-image: url(bilder/summonersrift-background.jpeg);
+    padding-top: 10px;
+    padding-bottom: 57px;
+    margin-top: 0px;
+    color: white;
+    background-size: cover;
+    border-bottom: #c89b3c 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.kartan img {
+    width: 50%;
+    margin-left: 2.5%;
+    margin-bottom: 50px;
+
+    border: solid #c89b3c 2px;
+    
+}
+.titelkarta {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.kartaInfo {
+    margin: auto;
+    width: 48%;
+    text-align: left;
+    float: right;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: BeaufortforLOL-Bold, sans-serif;
+}
+.kartaInfo abbr:hover {
+    color: #c89b3c;
+}
+
+/* gubbarna */
+.gubbarna {
+    background-image: url(bilder/regioner/targon.jpg);
+    background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    border-bottom: #c89b3c 1px solid;
+}
+.gubbklasser {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.allaGubb {
+    width: 308px;
+    height: 607px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    border: #c89b3c solid 2px;
+    background-repeat: repeat-x;
+}
+.gubbh3 {
+    color: white;
+    text-align: center;
+    background: #111;
+    height: 50px;
+    vertical-align: bottom;
+    font-family: BeaufortforLOL-Bold, sans-serif;
+    font-size: 38px;
+    margin-top: 0px;
+}
+#gubh1 {
+    color: white;
+    margin-top: 18px;
+}
+.klassText {
+    color: white;
+    font-family: BeaufortforLOL-Bold, sans-serif;
+    margin-top: 418px;
+    width: 96%;
+    font-size: 19px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.klassText abbr:hover {
+    color: #c89b3c;
+}
+/* sätte bakgrund på klasserna av gubbar */
+.assasin {
+    background-image: url(bilder/noctourne.jpg);
+}
+.fighter{
+    background-image: url(bilder/jax.jpg);
+}
+.mage{
+    background-image: url(bilder/karthus.jpg);
+}
+.marksman{
+    background-image: url(bilder/lucian.jpg);
+}
+.support{
+    background-image: url(bilder/morgana.jpg);
+}
+.tank{
+    background-image: url(bilder/shen.jpg);
+}
+
+
+
+/* världen */
+.världen {
+    height: auto;
+    background-image: url(bilder/runeterra.jpg);
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-size: cover;
+    font-family: BeaufortforLOL-Bold, sans-serif;
+    border-bottom: #c89b3c 1px solid;
+}
+.världen h1 {
+    font-size: 40px;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+/* fixar layouten på regioner delen */
+.regioner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+/* Regionerna, har lite information om hur regionerna ser ut och bakgrundsbilder */
+.allareg {
+    background-size: cover;
+    height: 200px;
+    width: 345px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 80px;
+    border: 2px solid #1e2328;
+    cursor: pointer;
+}
+
+.allareg h2 {
+    margin: 0;
+    font-size: 40px;
+    background: rgba(30, 35,40, 0.5);
+    color: white;
+   
+}
+/* vad som händer när man hovrar övere regionerna */
+.allareg:hover {
+    border: 2px solid #c89b3c;
+}
+.allareg:hover h2 {
+    background: rgba(30, 35,40, 0.95);
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+.bandelcity {
+    background-image: url(bilder/regioner/bandle-city.jpg);
+    
+}
+.bilgewater {
+    background-image: url(bilder/regioner/bilgewater.jpg);
+   
+}
+.demacia {
+    background-image: url(bilder/regioner/demacia.jpeg);
+    
+}
+.ionia {
+    background-image: url(bilder/regioner/ionia.jpg);
+    
+}
+.ixtal {
+    background-image: url(bilder/regioner/ixtal.jpg);
+    
+}
+.noxus {
+    background-image: url(bilder/regioner/noxus.jpg);
+    
+}
+.piltover {
+    background-image: url(bilder/regioner/piltover.jpg);
+    
+}
+.shadowisles {
+    background-image: url(bilder/regioner/shadow-isles.jpg);
+    
+}
+.shurima {
+    background-image: url(bilder/regioner/shurima.jpg);
+    
+}
+.targon {
+    background-image: url(bilder/regioner/targon.jpg);
+    
+}
+.freljord {
+    background-image: url(bilder/regioner/freljord.jpg);
+    
+}
+.thevoid {
+    background-image: url(bilder/regioner/the-void.jpg);
+    
+}
+.zaun {
+    background-image: url(bilder/regioner/zaun.jpeg);
+    
+}
+/* Regioner info delar */
+/* Här är de popup delarna som visas och deras stilmallar som sätter knapparna och bilderna och texterna*/
+.reginfo {
+    margin-bottom: 0px;
+    color: white;
+}
+.allareg-info {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #1e2328;
+    padding: 25px;
+    border-bottom: 2px solid #c89b3c;
+    border-left: 2px solid #c89b3c;
+    border-right: 2px solid #c89b3c;
+}
+.infoh1 {
+    margin: 0;
+    font-size: 45px;
+}
+.infoh2 {
+    font-size: 40px;
+    width: 150px;
+    margin: 0;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+.infoimg {
+    width: 138px;
+    max-height: 170px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px;
+}
+.infodiv1 {
+    width: 150px;
+    height: 238px;
+    
+    
+}
+.gubbar-regioner {
+    margin-left: 10px;
+}
+.regioner-gubbar {
+    margin-top: -225px;
+    float: left;
+    width: 488px;
+    margin-left: 150px;
+}
+.h1-region {
+    text-align: center;
+    margin-left: 150px;
+    margin-top: -80px;
+    margin-left: 160px;
+    width: 478px;
+    height: 74px;
+}
+
+.allagubbarinfo {
+    height: 108px;
+    width: 108px;
+    float: left;
+    border: #c89b3c solid 2px;
+    border-radius: 50%;
+    
+}
+.h3info {
+    text-align: center;
+    margin-top: 115px;
+    margin-left: -5px;
+}
+.knapph {
+    width: 80px;
+    background: #1e2328;
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: right;
+    margin-right: 176px;
+    border-right: #c89b3c solid 2px;
+    border-bottom: #c89b3c solid 2px;
+    cursor: pointer;
+}
+.knapph img {
+    width: 80px;
+    height: 100px;
+}
+.knappv {
+    width: 80px;
+    background: #1e2328;
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+    margin-left: 176px;
+    border-left: #c89b3c solid 2px;
+    border-bottom: #c89b3c solid 2px;
+}
+.knappv img {
+    width: 80px;
+    height: 100px;
+    transform: rotate(180deg);
+}
+
+/* 
+I
+I   Här är stilmallarna som bestämmer bilderna på de gubbarna i informationen och deras inzomining och positionering
+I   Och andra bilder i den delen 
+I
+*/
+
+
+
+
+
+/* bandelcityinfo */
+.bandelcityinfo {
+    background-image: url(bilder/regioner/bandle-city.jpg);  
+}
+#bandelcityinfo {
+    display: none;
+}
+
+
+.region-p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-top: 43px;
+}
+
+.lulu{
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt71009d4f4fabcf6f/60ee0f3fb898ee4eaeb6e6a7/Lulu_0.jpg");
+    background-position: 78.7% 24.1%;
+    background-size: 250%;
+    
+}
+.teemo {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8ed0ddc56697f275/60ee12deaa9be3239e98d9a2/Teemo_0.jpg");
+    background-position: 78.2716% 12.9707%;
+    background-size: 250%;
+    
+}
+.tristana {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blte1289411582cdefa/60ee13023a7d261c53fb5275/Tristana_0.jpg");
+    background-position: 75.8848% 3.62622%;
+    background-size: 250%;
+    
+}
+.veigar {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2660186c36e21d58/60ee137d09c9f73c0e83f8a0/Veigar_0.jpg");
+    background-position: 71.1934% 9.90237%;
+    background-size: 250%;
+    
+}
+
+
+
+
+
+/* bilgewaterinfo */
+.bilgewaterinfo {
+    background-image: url(bilder/regioner/bilgewater.jpg);
+}
+#bilgewaterinfo {
+    display: none;
+}
+
+
+.bilge-p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-top: 43px;
+}
+.fizz {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltf6341c794f5cefbd/60ee0d6494d70a1ef31237b5/Fizz_0.jpg");
+    background-position: 97.1193% 14.5049%;
+    background-size: 250%;
+}
+.gangplank {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt36342e427842cf72/60ee0db41998302436df3459/Gangplank_0.jpg");
+    background-position: 68.9712% 0.83682%;
+    background-size: 250%;
+}
+.nautilus {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt758bc6307b613946/60ee0fd285b04228439613d5/Nautilus_0.jpg");
+    background-position: 88.4774% 0.55788%;
+    background-size: 250%;
+}
+.pyke {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt359f81b2f47d8434/60ee11234be40c60fcda6d20/champion-pyke-splash.jpg");
+    background-position: 49.4271% 22.2222%;
+    background-size: 250%;
+}
+
+/* demaciainfo */
+.demaciainfo {
+    background-image: url(bilder/regioner/demacia.jpeg);
+}
+#demaciainfo {
+    display: none;
+}
+
+.demacia-top {
+    margin-top: 20px;
+}
+.fiora {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3431e69df04282e5/60ee0d5e12cadb2032d63ac3/Fiora_0.jpg");
+    background-position: 71.1111% 0%;
+    background-size: 250%;
+}
+.garen {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltda4249a36a7acf13/60ee0dbd66d52e63b8eb6b4f/Garen_0.jpg");
+    background-position: 93.5802% 19.6653%;
+    background-size: 250%;
+}
+.lux {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9f9df38e50f393d4/60ee0f4c5eda9722617c575e/Lux_0.jpg");
+    background-position: 64.5267% 7.11297%;
+    background-size: 250%;
+}
+.sylas {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt37610e0af19b202c/60fb5338b409525ac94e5b0a/sylas-splash.jpg");
+    background-position: 50.5208% 10.1681%;
+    background-size: 250%;
+}
+
+/* ioniainfo */
+.ioniainfo {
+    background-image: url(bilder/regioner/ionia.jpg);
+}
+#ioniainfo {
+    display: none;
+}
+.irelia {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5093ac3980fc83a1/60ee0e2a4b5f906107319576/Classic_Irelia_Splash.jpg");
+    background-position: 50.2083% 11.578%;
+    background-size: 250%;
+}
+.ivern {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2b44c03ee6865bf4/60ee0e2fda02804b3fb7dc06/Ivern_0.jpg");
+    background-size: 250%;
+    background-position: 46.8313% 0%;
+}
+.lilia {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2560838ced20b5d5/60ee0f2925b09b4bfcbdf557/lillia-splash.jpg");
+    background-position: 45.1% 21.4915%;
+    background-size: 250%;
+}
+.ahri {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltda668b66206f7f9e/60ee0b41cdb93c284ee3e936/Ahri_0.jpg");
+    background-position: 67.4897% 14.6444%;
+    background-size: 250%;
+}
+/* ixtalinfo */
+.ixtalinfo {
+    background-image: url(bilder/regioner/ixtal.jpg);
+}
+#ixtalinfo {
+    display: none;
+}
+.rengar {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4c3e514b7691fbf8/60ee115b418ee7283c2e76d8/Rengar_0.jpg");
+    background-position: 74.0741% 19.6653%;
+    background-size: 250%;
+}
+.malphite {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt78c8355477d986b9/60ee0f4f5397524ead389121/Malphite_0.jpg");
+    background-size: 250%;
+    background-position: 76.7901% 56.2064%;
+}
+.nidalee {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta65bbcd489ac4d4e/60ee0fde47e9392c538205a5/Nidalee_0.jpg");
+    background-size: 250%;
+    background-position: 83.8683% 1.53417%;
+}
+.qiyana {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt80f762fa9307cbce/60ee11277a84715a12c2a2f1/qiyana_splash.jpg");
+    background-size: 250%;
+    background-position: 50.6% 23.4668%;
+}
+/* noxusinfo */
+.noxusinfo {
+    background-image: url(bilder/regioner/noxus.jpg);
+}
+#noxusinfo {
+    display: none;
+}
+.darius {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltf982b9e4117d5cc2/60ee0c7d33819c6236259c0f/Darius_0.jpg");
+    background-size: 250%;
+    background-position: 61.3169% 0%;
+}
+.katarina {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3dafcae87ee7c45a/60ee0e8fa9af29474648beef/Katarina_0.jpg");
+    background-size: 250%;
+    background-position: 67.6543% 49.6513%;
+}
+.kled {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt413da705852a68d3/60ee0f125397524ead389119/Kled_0.jpg");
+    background-size: 250%;
+    background-position: 90.6996% 0.55788%;
+}
+.sion {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltfadf063f94aef735/60ee1217da02804b3fb7dcc2/Sion_0.jpg");
+    background-size: 250%;
+    background-position: 77.6955% 0.55788%;
+}
+/* piltoverinfo */
+.piltoverinfo {
+    background-image: url(bilder/regioner/piltover.jpg);
+}
+#piltoverinfo {
+    display: none;
+}
+.camille {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbd386a184535b43d/60ee0c0625b09b4bfcbdf519/camille_splash.jpg");
+    background-size: 250%;
+    background-position: 94.6289% 0.974026%;
+}
+.orianna {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8bde2f92f5419aa3/60ee1080cfb8f23a9413d227/Orianna_0.jpg");
+    background-size: 250%;
+    background-position: 88.8889% 0%;
+}
+.ezreal {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt701ca0d74cad88e2/60ee0cf283f3965f5b9868b8/Ezreal_splash.jpg");
+    background-size: 250%;
+    background-position: 67.0782% 19.6653%;
+}
+.vi {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt386aa1a09687ad91/60ee138c43739d6620a57392/Vi_0.jpg");
+    background-size: 250%;
+    background-position: 76.214% 18.8285%;
+}
+/* shadowislesinfo */
+.shadowislesinfo {
+    background-image: url(bilder/regioner/shadow-isles.jpg);
+}
+#shadowislesinfo {
+    display: none;
+}
+.viego {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4a1eca6952a9cb94/60ee139130f3493a9f2fa48a/viego-splash.jpg");
+    background-position: 74.6842% 18.4561%;
+    background-size: 250%;
+}
+.thresh {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9fd7de40b070c6d4/60ee12e97a84715a12c2a301/Thresh_0.jpg");
+    background-position: 69.7119% 0.41841%;
+    background-size: 250%;
+}
+.elise {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt941efa8bafc6e372/60ee0cdbb403be64e6627796/Elise_0.jpg");
+    background-position: 82.8807% 13.6681%;
+    background-size: 250%;
+}
+.maokai {
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltff54a47e019fbd69/60ee0f56730ed71c59413ab7/Maokai_0.jpg");
+    background-position: 73.8272% 21.7573%;
+    background-size: 250%;
+}
+/* shurimainfo */
+.shurimainfo {
+    background-image: url(bilder/regioner/shurima.jpg);
+}
+#shurimainfo {
+    display: none;
+}
+.azir {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9035b786fd86e68d/60ee0b8d927567256a375e26/Azir_0.jpg");
+    background-position: 84.4444% 13.3891%;
+}
+.skarner {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt7f291e5a370b94f4/60ee1225feddb63580fcb6a7/Skarner_0.jpg");
+    background-position: 82.6337% 38.4937%;
+}
+.xerath {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1bc67812e9b9e156/60ee13c77b4a95436e1ae0a8/Xerath_0.jpg");
+    background-position: 57.6955% 3.20781%;
+}
+.akshan {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5e69e0645890bf95/60ee0b48aa56744b33ce03ab/akshan-splash.jpg");
+    background-position: 67.7083% 50.9259%;
+}
+/* targoninfo */
+.targoninfo {
+    background-image: url(bilder/regioner/targon.jpg);
+}
+#targoninfo {
+    display: none;
+}
+.taric {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd6031c92be7eafe7/60ee12d872ec164ac4beddd4/Taric_0.jpg");
+    background-position: 87.3251% 5.71827%;
+}
+.leona {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6a3490eb186aa2d8/60ee0f2325b09b4bfcbdf553/Leona_0.jpg");
+    background-position: 87.3251% 5.71827%;
+}
+.diana {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc235fa2b417ef7a4/60ee0cb166d52e63b8eb6b3f/Diana_0.jpg");
+    background-position: 77.7778% 32.636%;
+}
+.zoe {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta5516014683545a0/60ee1444a471a34acb2c2016/zoe-splash.jpg");
+    background-position: 54.9479% 23.1718%;
+}
+/* frelkordinfo */
+.freljordinfo {
+    background-image: url(bilder/regioner/freljord.jpg);
+}
+#freljordinfo {
+    display: none;
+}
+.ashe {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5388dc09a75213a1/60ee0b7912cadb2032d63aa7/Classic_Ashe_Splash.jpg");
+    background-position: 69.4271% 5.44148%;
+}
+.ornn {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltdf55bc487bced1a5/60ee1087191da52267d90a30/ornn-splash.jpg");
+    background-position: 49.4271% 30.3704%;
+}
+.volibear {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbf16308b8376a69b/60ee13a60311fd25c98c2c4d/volibear-splash.jpg");
+    background-position: 57.9084% 4.42087%;
+}
+.anivia {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt564c38e619cc505c/60ee0b53d42632662baee2bf/Anivia_0.jpg");
+    background-position: 58.8477% 22.5941%;
+}
+/* thevoidinfo */
+.thevoidinfo {
+    background-image: url(bilder/regioner/the-void.jpg);
+}
+#thevoidinfo {
+    display: none;
+}
+.velkoz {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3c72620cdc5d8b98/60ee13831d961d58d812dc66/Velkoz_0.jpg");
+    background-position: 62.4691% 31.6597%;
+}
+.kogmaw {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltaee2891bd2416f03/60ee0f1544ff471db19c907f/KogMaw_0.jpg");
+    background-position: 73.0041% 67.9219%;
+}
+.kaisa {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd8de2cd9f955bffc/60ee0e6b975ffd4ff25ec2ab/kaisa-splash.jpg");
+    background-position: 48.3333% 12.4448%;
+}
+.khazix {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt619b602796c258c4/60ee0efc60216d1db87a1219/Khazix_0.jpg");
+    background-position: 80.9053% 32.2176%;
+}
+/* zauninfo */
+.zauninfo {
+    background-image: url(bilder/regioner/zaun.jpeg);
+}
+#zauninfo {
+    display: none;
+}
+.singed {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt84220fdc67ead8d8/60ee120e2202166087e382c8/Singed_0.jpg");
+    background-position: 77.7778% 0.55788%;
+}
+.zac {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt88c6a720fb19e73e/60ee13fb85b0422843961421/Zac_0.jpg");
+    background-position: 76.0494% 60.251%;
+}
+.twitch {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6d95f66073acbe03/60ee1319730ed71c59413b0d/Twitch_0.jpg");
+    background-position: 62.5514% 27.4756%;
+}
+.viktor {
+    background-size: 250%;
+    background-image: url("https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt68b21a4007b1ffdf/60ee13932202166087e382d2/Viktor_0.jpg");
+    background-position: 74.7325% 3.20781%;
+}
+/* Slut av repititioner */
+
+
+
+
+
+
+/* WORLDS sektionen Olika delar i worlds delen */
+.WorldsContent {
+    width: 1400px;
+    margin: auto;
+    height: 970px;
+}
+table {
+    border: solid black 2px;
+    border-radius: 4px; 
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.vit {
+    background: white;
+}
+tr, td {
+    margin: 0;
+    background: lightgray;
+}
+.worlds h1 {
+    text-align: center;
+    margin-bottom: 80px;
+    
+}
+#worlds-text {
+    width: 400px;
+    font-size: 25px;
+    float: right;
+    margin-right: 70px;
+    font-weight: 500;
+    
+} 
+.grupper {
+    margin-bottom: 50px;
+}
+.grupper tbody {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.worlds-låt video {
+    width: 800px;
+}
+.worlds-låt p {
+    float: right;
+    width: 400px;
+    margin-right: 5%;
+    
+    line-height: 1.5;
+    font-family: 'BeaufortforLOL-Bold';
+    font-size: 30px;
+}
+
+/* Om Riot sektionen spelen, video och layouten för delen*/
+#Riot-p-wiki {
+    text-align: center;
+    font-size: 20px;
+}
+#Riot-p-wiki a {
+    color: aqua;
+
+}
+.riot {
+    
+    background-image: linear-gradient(#1e2328, white);
+    font-family: 'BeaufortforLOL-Bold';
+    
+}
+.riot h2 {
+    margin-top: 0px;
+}
+.riotspel {
+    
+    width: 82%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.RiotSpelH1 {
+    text-align: center;
+    margin-bottom: 41.44px;
+    margin-top: 0px;
+    padding-top: 40px;
+}
+.allaSpel {
+    border: #c89b3c 3px solid;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    cursor: pointer;
+    background: #1e2328;
+}
+.riotLeauge {
+    width: 400px;
+    height: 190px;
+    
+}
+.Spelen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.valorant {
+    width: 400px;
+    height: 250px;
+    margin-left: 0px;
+    
+}
+.tft {
+    width: 400px;
+    height: 250px;
+    
+}
+.wildRift {
+    width: 400px;
+    height: 250px;
+    margin-right: 0px;
+}
+.LORuneterra {
+    width: 400px;
+    height: 190px;
+    
+}
+/* Hover effekter spel och deras start dispaly */
+.valorant:hover .valspel {
+    display: none;
+}
+.valspel2 {
+    display: none;
+    margin: 0;
+    height: 250px;
+    border-radius: 8px;
+    width: 400px;
+}
+.valorant:hover .valspel2 {
+    display: block;
+}
+
+.tft:hover .TftSpel {
+    display: none;
+}
+.TftSpel2 {
+    display: none;
+    margin: 0;
+    height: 250px;
+    border-radius: 8px;
+    width: 400px;
+}
+.tft:hover .TftSpel2 {
+    display: block;
+}
+
+.wildRift:hover .WildSpel {
+    display: none;
+}
+.WildSpel2 {
+    display: none;
+    margin: 0;
+    height: 250px;
+    border-radius: 8px;
+    width: 400px;
+}
+.wildRift:hover .WildSpel2 {
+    display: block;
+}
+
+.riotLeauge:hover .LolSpel {
+    display: none;
+}
+.LolSpel2 {
+    display: none;
+    margin: 0;
+    height: 190px;
+    border-radius: 8px;
+    width: 400px;  
+}
+.riotLeauge:hover .LolSpel2 {
+    display: block;
+}
+
+.LORuneterra:hover .LORSpel {
+    display: none;
+}
+.LORSpel2 {
+    display: none;
+    margin: 0;
+    height: 190px;
+    border-radius: 8px;
+    width: 400px;  
+}
+.LORuneterra:hover .LORSpel2 {
+    display: block;
+}
+
+/* klick delar spel */
+/* Divarna som kommer fram efter man klcikar på spelen, annvänds som stilmall till alla spelane */
+.H1Spel {
+    width: 380px;
+    margin-right: 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+.IMGSpel {
+    float: right;
+    width: 460px;
+    margin-top: -60px;
+    border-radius: 8px;
+}
+.PSpel {
+    font-size: 30px;
+    color: white;
+}
+.PSpel abbr:hover {
+    color: #c89b3c;
+}
+.SPELInfo {
+    width: 860px;
+    border-radius: 15px;
+    background: #111;
+    height: 500px;
+    position: absolute;
+    padding: 20px;
+    border: 2px rgba(255, 255, 255, 0.87) solid;  
+    display: none;
+    
+}
+.close img{
+    height: 20px;
+    float: right;
+    cursor: pointer;
+}
+.bakgrundSpel {
+    background: #1e2328;
+}
+/* valorant info vvv */
+
+#VALLogga {
+    float: right;
+    width: 100px;
+    margin-right: -130px;
+    
+}
+#valInfo {
+    background: rgba(30, 35, 40, 1);
+    
+}
+
+/* valorant info ^^^ */
+/* Team fight tactics vvv */
+
+#TFTLogga {
+    float: right;
+    width: 100px;
+    margin-right: -130px;
+}
+/* Team fight tactics ^^^ */
+/* Wild rift vvv */
+#WILDLogga {
+    float: right;
+    width: 100px;
+    margin-right: -130px;
+}
+/* Wild rift ^^^ */
+/* Leauge Of Legends vvv */
+#LOLLogga {
+    float: right;
+    width: 100px;
+    margin-right: -130px;
+}
+/* Leauge Of Legends ^^^ */
+/* Legends of runeterra vvv */
+#LORLogga {
+    float: right;
+    width: 100px;
+    margin-right: -130px;
+}
+/* Legends of runeterra ^^^ */
+/* Namnen på spelen positionering */
+#LolSpel {
+    margin-top: 22px;
+    margin-left: 26px;
+}
+#ValSpel {
+    margin-left: 26px;
+    margin-top: 7px;
+}
+#TftSpel {
+    margin-left: 26px;
+    margin-top: 11px;
+}
+#WildSpel {
+    margin-left: 26px;
+    margin-top: 14px;
+}
+#LORSpel {
+    margin-left: 26.5px;
+    margin-top: 39px;
+}
+/* Arcane */
+
+/* Stället so mbestämmer hur delen om riot ifo som hanterar arcane ser ut */
+.arcane {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.arcane h1 {
+    font-size: 38px;
+    color: black;
+}
+.arcaneText {   
+    color: black;
+    font-size: 26px;
+}
+#h2arcane {
+    margin-top: 10px;
+    text-align: center;
+}
+#arcaneBild {
+    width: 800px; 
+}
+#arcaneLogga {
+    position: relative;
+    top: -166px;
+    left: 30px;
+    width: 210px;
+}
+
+#arcaneBildDiv {
+    width: 800px;
+    height: 400px;
+}
+#Trailer {
+    height: auto;
+}
+#TextArcane {
+    font-size: 26px;
+    
+}
+/* Footer */
+/* Footern med knappen loggan osv */
+.footer {
+    background: #111;
+    height: 350px;
+    color: white;
+    
+    
+}
+#footerp {
+    margin: auto;
+    text-align: center;
+    padding-top: 235px;
+    color: #ffffffc9;
+}
+.Afoot {
+    color: #ffffffc9;
+    text-decoration: none;
+    
+    
+}
+.tibble {
+    height: 50px;
+    margin-bottom: 6px;
+
+    animation: rotation 10s linear infinite;
+
+}
+
+/* Antimation som roterar tibble loggan */
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+/* Kontakt */
+/* sätter stilmallen till kontakt delen, väljer bakgrund positionering osv, storlekarr */
+.kontakt {
+    background-image: url(bilder/kontaktBakgrund.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 767px;
+    width: 100%;
+    display: none;
+}
+.kontaktDel {
+    width: 100%;
+    margin: auto;
+    
+    background-color: rgba(30, 35, 40, .55);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+#kontaktH1 {
+    text-align: center;
+    color: white;
+    opacity: 1;
+    margin-top: 120px;
+}
+#KonataktForm {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.inputKon {
+    margin-top: 15px;
+    width: 300px;
+    border-radius: 5px;
+    height: 40px;
+    background: #111;
+    color: white;
+}
+#inputKon:hover {
+    background: lightgray;
+    color: rgb(65, 65, 65);
+}
+#Fråga {
+    margin-top: 15px;
+    width: 300px;
+    background: #111;
+    color: white;
+    border-radius: 5px;
+    
+}
+#Fråga:hover {
+    background: lightgray;
+    color: rgb(65, 65, 65);
+
+}
+#Submit {
+    margin-top: 15px;
+    width: 50px;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+#Submit:hover {
+    cursor: pointer;
+    background: lightgray;
+    color: rgb(65, 65, 65);
+}
+
+#Smedie {
+    width: 150px;
+}
+
+
+
+
+
+
+/* Andra sida */  
+/* Responssidan som kommer upp när man skickar in sin feedback */
+.body2 {
+    background-color: #1e2328;
+    height: 100vh;
+    
+}
+#AndrasidaH1 {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 200px;
+    color: white;
+}
+#aAndrasida { 
+    font-size: 70px;    
+
+    display: block;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+#div1 {
+    width: 100%;
+}
+
+
+
+
+.bild-i-info-höger {
+    float: right;
+    margin-top: -240px;
+    width: 400px;
+    height: 210px;
+}
+
+
+
